@@ -8,8 +8,8 @@ plot2 <- function(NEI) {
 
     library(dplyr)
     
-    MarylandFIPS <- "24510"
-    ML.NEI <- subset(NEI, fips == MarylandFIPS)
+    BaltCityFIPS <- "24510"
+    ML.NEI <- subset(NEI, fips == BaltCityFIPS)
     
     ML.NEI <- group_by(ML.NEI, year)
     HL.ML.NEI <- summarise(ML.NEI, sum(Emissions))
